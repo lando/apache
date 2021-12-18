@@ -1,0 +1,14 @@
+name: lando-apache
+proxy:
+  override:
+    - landoapache.lndo.site
+services:
+  defaults:
+    type: apache
+  patch:
+    type: apache:2.4.39
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/apache": ./../../

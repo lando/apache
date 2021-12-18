@@ -1,0 +1,26 @@
+name: lando-apache-custom
+proxy:
+  override:
+    - landoapachecustom.lndo.site
+services:
+  custom:
+    type: apache
+    webroot: web
+    ssl: true
+    config:
+      server: config/httpd.conf
+      vhosts: config/custom.conf
+  override:
+    type: apache
+    webroot: web
+    overrides:
+      ports:
+        - target: 80
+          published: 8080
+          protocol: tcp
+          mode: host
+
+# This is important because it lets lando know to test against the plugin in this repo
+# DO NOT REMOVE THIS!
+plugins:
+  "@lando/apache": ./../../
