@@ -1,0 +1,14 @@
+# Disable the "core" apache plugins
+disablePlugins:
+  - lando-apache
+
+# Make sure we are dogfooding this plugin for testing purposes
+plugins:
+  "@lando/apache": /home/runner/work/apache/apache
+
+# Disable metrics reporting
+stats:
+  - report: false
+    url: https://metrics.lando.dev
+
+
