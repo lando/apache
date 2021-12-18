@@ -33,7 +33,7 @@ lando ssh -s custom -c "cat /opt/bitnami/apache/conf/httpd.conf | grep LANDOHTTP
 lando ssh -s custom -c "cat /opt/bitnami/apache/conf/vhosts/lando.conf | grep LANDOCUSTOM"
 
 # Should use htaccess-lando if it exists
-lando ssh -s override -c "curl -I http://landoapache.lndo.site/folder1" | grep Location | grep http://landoapache.lndo.site/folder2/
+lando ssh -s override -c "curl -I http://landoapachecustom.lndo.site/folder1" | grep Location | grep http://landoapachecustom.lndo.site/folder2/
 ```
 
 Destroy tests
