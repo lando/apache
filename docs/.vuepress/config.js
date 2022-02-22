@@ -29,8 +29,6 @@ module.exports = {
         link: '/index.md',
       },
       '/config.md',
-      '/caveats.md',
-      '/extensions.md',
       '/support.md',
       {text: 'Examples', link: 'https://github.com/lando/apache/tree/main/examples'},
       {text: 'Release Notes', link: 'https://github.com/lando/apache/releases'},
