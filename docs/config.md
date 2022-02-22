@@ -1,35 +1,9 @@
 ---
-description: Add an Apache web server service to your Lando config for local development with all the power of Docker and Docker Compose; learn how to change version, setup SSL, use a custom webroot or custom Apache config.
+title: Configuration
+description: Learn how to configure the Lando Apache service.
 ---
 
-# Apache
-
-[Apache](https://www.apache.org/) is a very common web server which you can easily add to your Lando app by adding an entry to the [services](https://docs.lando.dev/config/services.html) top-level config in your [Landofile](https://docs.lando.dev/config/lando.html).
-
-[[toc]]
-
-## Supported versions
-
-*   **[2.4](https://hub.docker.com/r/bitnami/apache)** **(default)**
-*   [custom](https://docs.lando.dev/config/services.html#advanced)
-
-## Patch versions
-
-::: warning Not officially supported!
-While we allow users to specify patch versions for this service, they are not *officially* supported, so if you use one, YMMV.
-:::
-
-To use a patch version, you can do something as shown below:
-
-```yaml
-services:
-  myservice:
-    type: apache:2.4.33
-```
-
-But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnami/apache/tags) for the underlying image we are using.
-
-## Configuration
+# Configuration
 
 Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/config/services.html) to get a good handle on how the magicks work.
 
@@ -46,7 +20,7 @@ services:
       vhosts: SEE BELOW
 ```
 
-### Using custom Apache config files
+## Using custom Apache config files
 
 The default `config` files depend on how you have set `ssl` but are all available [here](https://github.com/lando/cli/tree/master/plugins/lando-services/services/apache).
 
@@ -78,8 +52,6 @@ services:
       vhosts: config/default.conf
 ```
 
-### Custom .htaccess-Lando
+## Custom .htaccess-Lando
 
 In some cases, you may want Apache to behave differently when running in Lando than in other environments. If you are using the default httpd.conf shipped with Lando, you can include a `.htaccess-lando` next to your normal `.htaccess` file. **Note**: If you include this file, the default `.htaccess` won't be loaded in Lando, so be sure to copy over the relevant rules to your `.htaccess-lando` file.
-
-<RelatedGuides tag="Apache"/>
