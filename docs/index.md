@@ -1,6 +1,7 @@
 ---
 title: Apache Lando Plugin
 description: Add an Apache web server service to your Lando config for local development with all the power of Docker and Docker Compose; learn how to change version, setup SSL, use a custom webroot or custom Apache config.
+next: ./config.html
 ---
 
 # Apache
