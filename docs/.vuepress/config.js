@@ -1,4 +1,4 @@
-const customTheme = require('@lando/vuepress-theme-default-plus);
+const customTheme = require('@lando/vuepress-theme-default-plus');
 
 module.exports = {
   lang: 'en-US',
