@@ -15,6 +15,9 @@
   "engines": {
     "node": ">=14.0.0"
   },
+  "lando": {
+    "packageManager": "yarn"
+  },
   "main": "index.js",
   "nyc": {
     "include": [
