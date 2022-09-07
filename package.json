@@ -2,22 +2,22 @@
   "name": "@lando/apache",
   "description": "A Lando plugin that provides a tight integration with Apache.",
   "version": "0.5.2",
-  "author": "John Ouellet @labboy0276",
+  "author": "Mike Pirog @pirog",
   "license": "GPL-3.0",
   "repository": "lando/apache",
   "bugs": "https://github.com/lando/apache/issues/new/choose",
   "homepage": "https://github.com/lando/apache",
   "keywords": [
     "lando",
+    "lando-service",
     "lando-plugin",
     "apache"
   ],
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
-  "lando": {
-    "packageManager": "yarn"
-  },
+  "bundledDependencies": true,
+  "lando": {},
   "main": "index.js",
   "nyc": {
     "include": [
