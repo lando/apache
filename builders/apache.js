@@ -2,6 +2,7 @@
 
 // Modules
 const _ = require('lodash');
+const path = require('path');
 
 // Builder
 module.exports = {
@@ -13,7 +14,7 @@ module.exports = {
       '2.4': 'bitnami/apache:2.4.41-debian-10-r52',
     },
     patchesSupported: true,
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     defaultFiles: {
       server: 'httpd.conf',
       vhosts: 'default.conf',
@@ -27,6 +28,7 @@ module.exports = {
   },
   parent: '_webserver',
   builder: (parent, config) => class LandoApache extends parent {
+    // Constructor
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
       // Use different default for ssl
