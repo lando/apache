@@ -13,7 +13,7 @@ module.exports = {
       '2.4': 'bitnami/apache:2.4.41-debian-10-r52',
     },
     patchesSupported: true,
-    confSrc: __dirname,
+    confSrc: path.resolve(__dirname, '..', 'config'),
     defaultFiles: {
       server: 'httpd.conf',
       vhosts: 'default.conf',
