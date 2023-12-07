@@ -2,6 +2,7 @@
 
 // Modules
 const _ = require('lodash');
+const path = require('path');
 
 // Builder
 module.exports = {
@@ -27,6 +28,7 @@ module.exports = {
   },
   parent: '_webserver',
   builder: (parent, config) => class LandoApache extends parent {
+    // Constructor
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
       // Use different default for ssl
