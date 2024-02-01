@@ -19,7 +19,7 @@ services:
 ## Supported versions
 
 *   **[2.4](https://hub.docker.com/r/bitnami/apache)** **(default)**
-*   [custom](https://docs.lando.dev/core/v3/lando-service.html#advanced)
+*   [custom](https://docs.lando.dev/core/v3/lando-service.html#overrides)
 
 ## Patch versions
 
