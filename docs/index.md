@@ -6,9 +6,9 @@ next: ./config.html
 
 # Apache
 
-[Apache](https://www.apache.org/) is a very common web server which you can easily add to your Lando app by adding an entry to the [services](https://docs.lando.dev/config/services.html) top-level config in your [Landofile](https://docs.lando.dev/config/lando.html).
+[Apache](https://www.apache.org/) is a very common web server which you can easily add to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/lando-service.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
 
-You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/config/services.html) top-level config in your [Landofile](https://docs.lando.dev/config/lando.html).
+You can easily add it to your Lando app by adding an entry to the [services](https://docs.lando.dev/core/v3/lando-service.html) top-level config in your [Landofile](https://docs.lando.dev/core/v3).
 
 ```yaml
 services:
@@ -19,7 +19,7 @@ services:
 ## Supported versions
 
 *   **[2.4](https://hub.docker.com/r/bitnami/apache)** **(default)**
-*   [custom](https://docs.lando.dev/config/services.html#advanced)
+*   [custom](https://docs.lando.dev/core/v3/lando-service.html#advanced)
 
 ## Patch versions
 
