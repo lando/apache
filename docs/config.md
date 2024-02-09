@@ -5,9 +5,9 @@ description: Learn how to configure the Lando Apache service.
 
 # Configuration
 
-Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/config/services.html) to get a good handle on how the magicks work.
+Here are the configuration options, set to the default values, for this service. If you are unsure about where this goes or what this means, we *highly recommend* scanning the [services documentation](https://docs.lando.dev/core/v3/lando-service.html) to get a good handle on how the magicks work.
 
-Also note that options, in addition to the [build steps](https://docs.lando.dev/config/services.html#build-steps) and [overrides](https://docs.lando.dev/config/services.html#overrides) that are available to every service, are shown below:
+Also note that options, in addition to the [build steps](https://docs.lando.dev/core/v3/lando-service.html#build-steps) and [overrides](https://docs.lando.dev/core/v3/lando-service.html#overrides) that are available to every service, are shown below:
 
 ```yaml
 services:
@@ -22,7 +22,7 @@ services:
 
 ## Using custom Apache config files
 
-The default `config` files depend on how you have set `ssl` but are all available [here](https://github.com/lando/apache/tree/main/services/apache).
+The default `config` files depend on how you have set `ssl` but are all available [here](https://github.com/lando/apache/tree/main).
 
 Note that if you set `config` to use your own files then those files should exist inside your application and be expressed relative to your project root as shown below:
 
