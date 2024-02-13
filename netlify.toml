@@ -39,9 +39,9 @@
 # We need this so preview environments and the base site look ok on their own
 [[redirects]]
   from = "/"
-  to = "/apache"
+  to = "/plugins/apache"
   status = 200
 [[redirects]]
-  from = "/apache/*"
+  from = "/plugins/apache/*"
   to = "/:splat"
   status = 200
