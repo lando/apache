@@ -1,3 +1,7 @@
+## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
+
+* This release has no content and exists just to deploy the new `mvb` docs
+
 ## v1.0.0 - [December 7, 2023](https://github.com/lando/apache/releases/tag/v1.0.0)
 
 * Dialed fully for `lando update`
