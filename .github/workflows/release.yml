@@ -11,7 +11,6 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       TERM: xterm
-      PRERELEASE_TAG: edge
     strategy:
       matrix:
         os:
@@ -54,13 +53,13 @@ jobs:
             npm publish --access public
             VERSION=$(node -p "require('./package.json').version")
             PACKAGE_NAME=$(node -p "require('./package.json').name")
-            npm dist-tag add @$PACKAGE_NAME@$VERSION edge
+            npm dist-tag add $PACKAGE_NAME@$VERSION edge
             echo "::notice title=Updated edge tag::The edge tag now points to $VERSION"
             echo "::notice title=Published ${{ github.ref_name }} to @${{ github.repository }}::This is a stable release published to the default 'latest' npm tag"
           else
-            npm publish --access public --tag ${{ env.PRERELEASE_TAG }} --dry-run
-            npm publish --access public --tag ${{ env.PRERELEASE_TAG }}
-            echo "::notice title=Published ${{ github.ref_name }} to @${{ github.repository }}@${{ env.PRERELEASE_TAG }}::This is a pre-release published to the '${{ env.PRERELEASE_TAG }}' npm tag"
+            npm publish --access public --tag edge --dry-run
+            npm publish --access public --tag edge
+            echo "::notice title=Published ${{ github.ref_name }} to @${{ github.repository }}@edge::This is a pre-release published to the 'edge' npm tag"
           fi
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_DEPLOY_TOKEN}}
