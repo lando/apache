@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.1.0-beta.1 - [October 24, 2024](https://github.com/lando/apache/releases/tag/v1.1.0-beta.1)
+
 * Reworked to get tests to pass again
 
 ## v1.0.1 - [October 17, 2024](https://github.com/lando/apache/releases/tag/v1.0.1)
