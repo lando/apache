@@ -1,6 +1,6 @@
-name: lando-apache
+name: lando-apache-defaults
 proxy:
-  override:
+  defaults:
     - landoapache.lndo.site
 services:
   defaults:
@@ -11,4 +11,4 @@ services:
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!
 plugins:
-  "@lando/apache": ./../../
+  "@lando/apache": ../..

@@ -13,7 +13,7 @@ Add a `apache` service to your Landofile
 ```yaml
 services:
   myservice:
-    type: apache
+    type: apache:2.4
 ```
 
 For more info you should check out the [docs](https://docs.lando.dev/apache):
