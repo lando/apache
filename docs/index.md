@@ -13,7 +13,7 @@ You can easily add it to your Lando app by adding an entry to the [services](htt
 ```yaml
 services:
   myservice:
-    type: apache
+    type: apache:2.4
 ```
 
 ## Supported versions
@@ -32,7 +32,7 @@ To use a patch version, you can do something as shown below:
 ```yaml
 services:
   myservice:
-    type: apache:2.4.33
+    type: apache:2.4.62
 ```
 
 But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnami/apache/tags) for the underlying image we are using.

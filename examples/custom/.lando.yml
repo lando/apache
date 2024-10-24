@@ -1,6 +1,6 @@
 name: lando-apache-custom
 proxy:
-  override:
+  custom:
     - landoapachecustom.lndo.site
 services:
   custom:
@@ -23,4 +23,4 @@ services:
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!
 plugins:
-  "@lando/apache": ./../../
+  "@lando/apache": ../..

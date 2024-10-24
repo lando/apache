@@ -48,18 +48,23 @@ jobs:
       # Deploy
       - name: Publish to npm
         run: |
+          VERSION=$(node -p "require('./package.json').version")
+          PACKAGE=$(node -p "require('./package.json').name")
+
           if [ "${{ github.event.release.prerelease }}" ==  "false" ]; then
             npm publish --access public --dry-run
             npm publish --access public
-            VERSION=$(node -p "require('./package.json').version")
-            PACKAGE_NAME=$(node -p "require('./package.json').name")
-            npm dist-tag add $PACKAGE_NAME@$VERSION edge
-            echo "::notice title=Updated edge tag::The edge tag now points to $VERSION"
-            echo "::notice title=Published ${{ github.ref_name }} to @${{ github.repository }}::This is a stable release published to the default 'latest' npm tag"
+            npm dist-tag add "$PACKAGE@$VERSION" edge
+
+            echo "::notice title=Published $VERSION to $PACKAGE::This is a stable release published to the default 'latest' npm tag"
+            echo "::notice title=Updated latest tag to $VERSION::The stable tag now points to $VERSION"
+            echo "::notice title=Updated edge tag to $VERSION::The edge tag now points to $VERSION"
           else
             npm publish --access public --tag edge --dry-run
             npm publish --access public --tag edge
-            echo "::notice title=Published ${{ github.ref_name }} to @${{ github.repository }}@edge::This is a pre-release published to the 'edge' npm tag"
+
+            echo "::notice title=Published $VERSION to $PACKAGE::This is a prerelease published to the 'edge' npm tag"
+            echo "::notice title=Updated edge tag to $VERSION::The edge tag now points to $VERSION"
           fi
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_DEPLOY_TOKEN}}

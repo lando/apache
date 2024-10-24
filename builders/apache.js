@@ -19,6 +19,13 @@ module.exports = {
       server: 'httpd.conf',
       vhosts: 'default.conf',
     },
+    environment: {
+      APACHE_HTTP_PORT_NUMBER: '80',
+      APACHE_USER: 'www-data',
+      APACHE_GROUP: 'www-data',
+      LANDO_NEEDS_EXEC: 'DOEEET',
+    },
+    ports: ['80'],
     remoteFiles: {
       server: '/opt/bitnami/apache/conf/httpd.conf',
       vhosts: '/opt/bitnami/apache/conf/vhosts/lando.conf',
@@ -31,21 +38,21 @@ module.exports = {
     // Constructor
     constructor(id, options = {}) {
       options = _.merge({}, config, options);
-      // Use different default for ssl
-      if (options.ssl) options.defaultFiles.vhosts = 'default-ssl.conf';
+
+      // Use different config for ssl
+      if (options.ssl) {
+        options.defaultFiles.vhosts = 'default-ssl.conf';
+        options.environment.APACHE_HTTPS_PORT_NUMBER = '443';
+        options.ports.push('443');
+      }
+
       // Build the default stuff here
       const apache = {
         image: `bitnami/apache:${options.version}`,
         command: '/launch.sh',
-        environment: {
-          APACHE_HTTP_PORT_NUMBER: '80',
-          APACHE_HTTPS_PORT_NUMBER: '443',
-          APACHE_USER: 'www-data',
-          APACHE_GROUP: 'www-data',
-          LANDO_NEEDS_EXEC: 'DOEEET',
-        },
-        ports: ['80'],
+        environment: options.environment,
         user: 'root',
+        ports: options.ports,
         volumes: [
           `${options.confDest}/launch.sh:/launch.sh`,
           `${options.confDest}/${options.defaultFiles.server}:${options.remoteFiles.server}`,
