@@ -45,10 +45,17 @@ jobs:
             setup.skipCommonPlugins=true
             setup.plugins.@lando/apache=/home/runner/work/apache/apache
           telemetry: false
-      - name: Run Leia Tests
-        uses: lando/run-leia-action@v2
-        with:
-          leia-test: "./${{ matrix.leia-test }}/README.md"
-          cleanup-header: "Destroy tests"
-          shell: bash
-          stdin: true
+      - name: DEBUGGY
+        run: |
+          ls -lsa ~/.lando/scripts
+          lando poweroff --debug
+          ls -lsa ~/.lando/scripts
+          lando start --debug
+
+      # - name: Run Leia Tests
+      #   uses: lando/run-leia-action@v2
+      #   with:
+      #     leia-test: "./${{ matrix.leia-test }}/README.md"
+      #     cleanup-header: "Destroy tests"
+      #     shell: bash
+      #     stdin: true
