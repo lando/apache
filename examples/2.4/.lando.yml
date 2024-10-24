@@ -1,4 +1,4 @@
-name: lando-apache
+name: lando-apache-defaults
 proxy:
   defaults:
     - landoapache.lndo.site
