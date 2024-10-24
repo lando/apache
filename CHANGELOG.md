@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Testing `edge` and `stable` release channel
+
 ## v1.1.0-beta.2 - [October 24, 2024](https://github.com/lando/apache/releases/tag/v1.1.0-beta.2)
 
 * Testing `edge` and `stable` release channel
