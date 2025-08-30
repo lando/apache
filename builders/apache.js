@@ -11,7 +11,7 @@ module.exports = {
     version: '2.4',
     supported: ['2.4'],
     pinPairs: {
-      '2.4': 'bitnami/apache:2.4.41-debian-10-r52',
+      '2.4': 'bitnamilegacy/apache:2.4.65-debian-12-r2',
     },
     patchesSupported: true,
     confSrc: path.resolve(__dirname, '..', 'config'),
@@ -48,7 +48,7 @@ module.exports = {
 
       // Build the default stuff here
       const apache = {
-        image: `bitnami/apache:${options.version}`,
+        image: `bitnamilegacy/apache:${options.version}`,
         command: '/launch.sh',
         environment: options.environment,
         user: 'root',
