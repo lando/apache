@@ -4,14 +4,14 @@ proxy:
     - landoapachecustom.lndo.site
 services:
   custom:
-    type: apache
+    type: apache:2
     webroot: web
     ssl: true
     config:
       server: config/httpd.conf
       vhosts: config/custom.conf
   override:
-    type: apache
+    type: apache:2.4
     webroot: web
     overrides:
       ports:

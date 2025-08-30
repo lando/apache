@@ -9,7 +9,7 @@ module.exports = {
   name: 'apache',
   config: {
     version: '2.4',
-    supported: ['2.4'],
+    supported: ['2', '2.4'],
     pinPairs: {
       '2': 'bitnamilegacy/apache:2.4.65-debian-12-r2',
       '2.4': 'bitnamilegacy/apache:2.4.65-debian-12-r2',
