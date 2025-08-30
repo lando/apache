@@ -19,11 +19,11 @@ lando start
 Run the following commands to validate things are rolling as they should.
 
 ```bash
-# Should return 2.4.41 for the default version
-lando exec defaults -- apachectl -V | grep 2.4.41
+# Should return 2.4.65 for the default version
+lando exec defaults -- apachectl -V | grep 2.4
 
-# Should return 2.4.39 for the patch service
-lando exec patch -- apachectl -V | grep 2.4.39
+# Should return 2.4.64 for the patch service
+lando exec patch -- apachectl -V | grep 2.4.64
 
 # Should serve from the app root by default
 lando exec defaults -- curl http://localhost | grep ROOTDIR
