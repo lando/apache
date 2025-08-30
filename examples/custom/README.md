@@ -30,7 +30,7 @@ lando exec custom -- cat /opt/bitnami/apache/conf/httpd.conf | grep LANDOHTTPD
 lando exec custom -- cat /opt/bitnami/apache/conf/vhosts/lando.conf | grep LANDOCUSTOM
 
 # Should use htaccess-lando if it exists
-lando exec override -- curl -I http://landoapachecustom.lndo.site/folder1 | grep Location | grep http://landoapachecustom.lndo.site/folder2/
+lando exec curl -- curl -I http://landoapachecustom.lndo.site/folder1 | grep Location | grep http://landoapachecustom.lndo.site/folder2/
 ```
 
 ## Destroy tests
