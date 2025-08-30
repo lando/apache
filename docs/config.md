@@ -45,7 +45,7 @@ Note that you can put your configuration files anywhere inside your application 
 ```yaml
 services:
   myservice:
-    type: apache
+    type: apache:2.4
     webroot: docroot
     config:
       server: config/httpd.conf

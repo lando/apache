@@ -2,8 +2,9 @@
 
 ## v1.2.0 - [August 29, 2025](https://github.com/lando/apache/releases/tag/v1.2.0)
 
-* Migrated packages to use the Bitnamilegacy repository
-* Minor updates to use any new tags and release builds
+* Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namspace
+* Updated `apache:2` to `2.4.65`
+* Updated `apache:2.4` to `2.4.65`
 
 ## v1.1.3 - [December 6, 2024](https://github.com/lando/apache/releases/tag/v1.1.3)
 

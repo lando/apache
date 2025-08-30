@@ -14,8 +14,6 @@
     skipPatterns = [ ".rss", ".gif", ".jpg" ]
     checkExternal = true
 
-
-
 # Sets our asset optimization
 [build.processing.css]
   bundle = true
@@ -44,6 +42,15 @@
 
 
 # We need this so preview environments and the base site look ok on their own
+[[redirects]]
+  from = "https://lando-apache.netlify.app"
+  to = "https://lando-apache.netlify.app/plugins/apache/index.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://lando-apache.netlify.app/*"
+  to = "https://docs.lando.dev/:splat"
+  status = 301
 [[redirects]]
   from = "/"
   to = "/plugins/apache"

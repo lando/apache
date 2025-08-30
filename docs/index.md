@@ -18,7 +18,8 @@ services:
 
 ## Supported versions
 
-*   **[2.4](https://hub.docker.com/r/bitnamilegacy/apache/tags?name=2.4.)** **(default)**
+*   [2](https://hub.docker.com/r/bitnamilegacy/apache/tags?name=2.4.)
+*   [2.4](https://hub.docker.com/r/bitnamilegacy/apache/tags?name=2.4.)
 *   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
 ## Patch versions
@@ -32,7 +33,7 @@ To use a patch version, you can do something as shown below:
 ```yaml
 services:
   myservice:
-    type: apache:2.4.62
+    type: apache:2.4.65
 ```
 
 But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnamilegacy/apache/tags) for the underlying image we are using.
