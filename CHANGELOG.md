@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.2.0 - [August 30, 2025](https://github.com/lando/apache/releases/tag/v1.2.0)
+
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
 * Updated `apache:2` to `2.4.65`
 * Updated `apache:2.4` to `2.4.65`
