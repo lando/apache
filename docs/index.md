@@ -18,7 +18,7 @@ services:
 
 ## Supported versions
 
-*   **[2.4](https://hub.docker.com/r/bitnami/apache)** **(default)**
+*   **[2.4](https://hub.docker.com/r/bitnamilegacy/apache/tags?name=2.4.)** **(default)**
 *   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
 
 ## Patch versions
@@ -35,5 +35,5 @@ services:
     type: apache:2.4.62
 ```
 
-But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnami/apache/tags) for the underlying image we are using.
+But make sure you use one of the available [patch tags](https://hub.docker.com/r/bitnamilegacy/apache/tags) for the underlying image we are using.
 
