@@ -26,10 +26,10 @@ lando exec defaults -- apachectl -V | grep 2.4.65
 lando exec patch -- apachectl -V | grep 2.4.41
 
 # Should serve from the app root by default
-lando exec defaults -- curl http://localhost | grep ROOTDIR
+lando exec curl -- curl http://defaults | grep ROOTDIR
 
 # Should only serve over http by default
-lando exec defaults -- curl https://localhost || echo $? | grep 7
+lando exec curl -- curl https://defaults || echo $? | grep 7
 ```
 
 ## Destroy tests
