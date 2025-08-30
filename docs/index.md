@@ -20,7 +20,7 @@ services:
 
 *   [2](https://hub.docker.com/r/bitnamilegacy/apache/tags?name=2.4.)
 *   [2.4](https://hub.docker.com/r/bitnamilegacy/apache/tags?name=2.4.)
-*   [custom](https://docs.lando.dev/core/v3/services/lando.html#overrides)
+*   [custom](https://docs.lando.dev/services/lando-3.html#overrides)
 
 ## Patch versions
 
