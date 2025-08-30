@@ -19,6 +19,11 @@ services:
           published: 8080
           protocol: tcp
           mode: host
+  curl:
+    api: 4
+    image: curlimages/curl:8.15.0
+    command: sleep infinity
+
 
 # This is important because it lets lando know to test against the plugin in this repo
 # DO NOT REMOVE THIS!

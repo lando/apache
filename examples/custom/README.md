@@ -20,10 +20,10 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should serve from webroot if specified
-lando exec custom -- curl http://localhost | grep WEBDIR
+lando exec curl -- curl http://custom | grep WEBDIR
 
 # Should serve from https when specified
-lando exec custom -- curl https://localhost | grep WEBDIR
+lando exec curl -- curl https://custom | grep WEBDIR
 
 # Should mount custom config to the correct locationz
 lando exec custom -- cat /opt/bitnami/apache/conf/httpd.conf | grep LANDOHTTPD
