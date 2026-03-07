@@ -1,5 +1,8 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Fixed prototype pollution vulnerability in `lodash` and `lodash-es`
+* Updated `@lando/argv` to `1.2.0`
+
 ## v1.2.0 - [August 30, 2025](https://github.com/lando/apache/releases/tag/v1.2.0)
 
 * Switched images to [bitnamilegacy](https://github.com/bitnami/containers/issues/83267) namespace
