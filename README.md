@@ -38,6 +38,7 @@ We try to log all changes big and small in both [THE CHANGELOG](https://github.c
 
 * [@pirog](https://github.com/pirog)
 * [@reynoldsalec](https://github.com/reynoldsalec)
+* [@aaronfeledy](https://github.com/AaronFeledy)
 
 ## Contributors
 
