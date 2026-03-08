@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+## v1.3.0 - [March 8, 2026](https://github.com/lando/apache/releases/tag/v1.3.0)
+
 * Enabled `mod_expires` Apache module by default [lando/lando#976](https://github.com/lando/lando/issues/976)
 * Fixed unclosed `<IfModule>` tag in `httpd.conf`
 * Updated `@lando/argv` to `1.2.0`
