@@ -1,5 +1,7 @@
 ## {{ UNRELEASED_VERSION }} - [{{ UNRELEASED_DATE }}]({{ UNRELEASED_LINK }})
 
+* Enabled `mod_expires` Apache module by default [lando/lando#976](https://github.com/lando/lando/issues/976)
+* Fixed unclosed `<IfModule>` tag in `httpd.conf`
 * Updated `@lando/argv` to `1.2.0`
 * Updated `lodash` to `4.17.23`
 * Updated `lodash-es` to `4.17.23`

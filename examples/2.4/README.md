@@ -30,6 +30,12 @@ lando exec curl -- curl http://defaults | grep ROOTDIR
 
 # Should only serve over http by default
 lando exec curl -- curl https://defaults || echo $? | grep 7
+
+# Should have mod_headers enabled and working
+lando exec curl -- curl -sI http://defaults | grep -i "X-Lando-Test: blazes"
+
+# Should have mod_expires enabled and working
+lando exec curl -- curl -sI http://defaults | grep -i "Expires:"
 ```
 
 ## Destroy tests
